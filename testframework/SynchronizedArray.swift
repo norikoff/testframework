@@ -9,9 +9,11 @@
 import Foundation
 
 
-public class SynchronizedArray<Element> {
+open class SynchronizedArray<Element> {
     fileprivate let queue = DispatchQueue(label: "com.norikoff.SynchronizedArray", attributes: .concurrent)
     fileprivate var array = [Element]()
+    
+    public init() {}
 }
 
 
